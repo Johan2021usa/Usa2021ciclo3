@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="application/json">
+    <link rel="stylesheet" href="css/estilos.css">
+    <title>Inicio</title>
+</head>
+
+<body>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="js/functions.js"></script>
+    <div class="header">
+        <h1>PAGINA WEB DE MI TIENDA: Cliente</h1>
+        <!--titulo principal-->
+    </div>
+    <div class="row">
+        <div class="col-3 col-s-3">
+            <!--BOTONES MENU-->
+            <ul class="menu">
+                <li><a href="index.html"><input class="butMenu" type="button" value="Inicio"></a></li>
+                <li><a href="mensaje.html"><input class="butMenu" type="button" value="mensaje"></a></li>
+                <li><a href="salon.html"><input class="butMenu" type="button" value="salon"></a></li>
+            </ul>
+        </div>
+        <div class="col-9 col-s-9">
+            <!--Resultados salon-->
+            <p class="centrarObj tituloCelda"> DATOS DE REGISTRO DE CLIENTE </p>
+            <div class="edicionTabla" id="contenedor3"></div>
+            <div class="centrarObj">
+                <input type="number" id="id" placeholder="id" onkeyup="validar()">
+                <input type="text" id="name" placeholder="name">
+                <input type="text" id="email" placeholder="email">
+                <input type="number" id="age" placeholder="age">
+                <br>
+            </div>
+            <div class="fondIni">
+                <!--<input class="butIni" type="button" value="Mostrar datos" onclick="consultarDatos()">-->
+                <input class="butIni" type="button" value="Mostrar datos" onclick="ayaxGetSimpleClient()">
+                <input class="butIni" type="button" value="Enviar registro" id="btncrear" onclick="crearDatosClient()">
+                <input class="butIni" type="button" value="Actualizar registro" id="btnactualiza" onclick="actualizarDatosClient()">
+                <br>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <p>Ingrese los valores segun las caracteristicas de cada celda</p>
+    </div>
+</body>
+
+</html>
